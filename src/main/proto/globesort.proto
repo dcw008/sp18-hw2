@@ -9,8 +9,10 @@ service GlobeSort {
   rpc SortIntegers (IntArray) returns (IntArray) {}
 }
 
-message Empty { }
+message Empty {
+}
 
 message IntArray {
   repeated int32 values = 1;
+  double time = 2;
 }
