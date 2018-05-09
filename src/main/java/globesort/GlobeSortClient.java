@@ -58,7 +58,9 @@ public class GlobeSortClient {
 	System.out.println("Time taken by server: " + serverDuration);
 	System.out.println("Time taken by client: " + clientDuration);
 	double oneWayThroughput = 1000000 / (clientDuration - serverDuration) / 2;
+	double applicationThroughput = 1000000 / clientDuration;
 	System.out.println("One way throughput: " + oneWayThroughput);
+	System.out.println("Application throughput : " + applicationThroughput);
     }
 
     public void shutdown() throws InterruptedException {
